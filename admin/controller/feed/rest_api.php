@@ -79,7 +79,7 @@ class ControllerFeedRestApi extends Controller {
 	}
 
 	public function install() {
-		$this->db->query("CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "device_table` (
+		$this->db->query("CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "device` (
   			`deviceid` varchar(32) NOT NULL,
   			`uuid` varchar(32) NOT NULL,
   			`aeskey` varchar(32) NOT NULL,
@@ -93,7 +93,7 @@ class ControllerFeedRestApi extends Controller {
 	}
 
 	public function uninstall() {
-		$this->db->query("DROP TABLE IF EXISTS `" . DB_PREFIX . "device_table`;");
+		$this->db->query("DROP TABLE IF EXISTS `" . DB_PREFIX . "device`;");
 		$this->db->query("ALTER TABLE `" . DB_PREFIX . "customer` DROP COLUMN api_token;");
 	}
 
