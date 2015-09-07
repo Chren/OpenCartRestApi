@@ -1,5 +1,6 @@
 # OpenCartRestApi
-This is restful api for opencart.
+This is restful api for opencart. It also extends OpenCart to support some features like register and login using mobile phone number. More features will be added in the future.
+
 ## Support Apis
 
 ### Account
