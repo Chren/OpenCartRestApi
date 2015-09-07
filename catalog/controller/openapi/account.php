@@ -223,7 +223,28 @@ class ControllerOpenapiAccount extends Controller {
 	}
 
 	public function logout() {
-		$this->customer->mobilelogout();
+		$this->load->model('openapi/device');
+		$this->load->model('openapi/authorize');
+		$this->load->model('openapi/order');
+
+		$this->load->language('error/api_error');
+		$json = array(
+			'code'  => 200,
+			'message'  => "",
+			'data' =>array(),
+		);
+
+		$headers = getallheaders();
+    	$api_token = $headers["token"];
+	
+		$customer = $this->model_openapi_authorize->getCustomerByApiToken($api_token);
+		if (isset($customer)) {
+			$this->customer->mobilelogout($customer["customer_id"]);
+		} else {
+			$json["code"] = 501;
+			$json["message"] = $this->language->get('api_error_501');
+		}
+		$this->response->setOutput(json_encode($json));
 	}
 
 	public function orders() {

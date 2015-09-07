@@ -254,9 +254,9 @@ class Customer {
 		$this->address_id = '';
 	}
 
-	public function mobilelogout() {
-		$this->db->query("UPDATE " . DB_PREFIX . "customer SET cart = '" . $this->db->escape(isset($this->session->data['cart']) ? serialize($this->session->data['cart']) : '') . "', wishlist = '" . $this->db->escape(isset($this->session->data['wishlist']) ? serialize($this->session->data['wishlist']) : '') . "' WHERE customer_id = '" . (int)$this->customer_id . "'");
-		$this->db->query("UPDATE " . DB_PREFIX . "customer SET api_token = '" . "" . "' WHERE customer_id = '" . (int)$this->customer_id . "'");
+	public function mobilelogout($customer_id) {
+		$this->db->query("UPDATE " . DB_PREFIX . "customer SET cart = '" . $this->db->escape(isset($this->session->data['cart']) ? serialize($this->session->data['cart']) : '') . "', wishlist = '" . $this->db->escape(isset($this->session->data['wishlist']) ? serialize($this->session->data['wishlist']) : '') . "' WHERE customer_id = '" . (int)$customer_id . "'");
+		$this->db->query("UPDATE " . DB_PREFIX . "customer SET api_token = '' WHERE customer_id = '" . (int)$customer_id . "'");
 		unset($this->session->data['customer_id']);
 
 		$this->customer_id = '';
