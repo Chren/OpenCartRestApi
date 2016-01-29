@@ -13,13 +13,13 @@ class ModelOpenapiAuthorize extends Model {
 	}
 
 	public function getDeviceByUuid($uuid) {
-		$query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "device_table` WHERE uuid = '" . $this->db->escape($uuid) . "'");
+		$query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "device` WHERE uuid = '" . $this->db->escape($uuid) . "'");
 
 		return $query->row;
 	}
 
 	public function getDeviceByDeviceid($deviceid) {
-		$query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "device_table` WHERE deviceid = '" . $this->db->escape($deviceid) . "'");
+		$query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "device` WHERE deviceid = '" . $this->db->escape($deviceid) . "'");
 		return $query->row;
 	}
 
