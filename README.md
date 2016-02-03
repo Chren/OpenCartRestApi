@@ -15,13 +15,16 @@ This is restful api for opencart. It also extends OpenCart to support some featu
 ## Support Apis
 ### Account
 #### RegisterDevice
-- `url`: index.php?route=openapi/account/registerdevice
+  url: index.php?route=openapi/account/registerdevice
+  
 #### Register
-- `url`: index.php?route=openapi/account/register
+  url: index.php?route=openapi/account/register
+  
 #### Login
-- `url`: index.php?route=openapi/account/login
+  url: index.php?route=openapi/account/login
+  
 #### Logout
-- `url`: index.php?route=openapi/account/logout
+  url: index.php?route=openapi/account/logout
 
 ### Products
 - `getproducts`
