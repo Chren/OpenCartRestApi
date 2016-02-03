@@ -17,6 +17,7 @@ This is restful api for opencart. It also extends OpenCart to support some featu
 ### Account
 
 - `registerdevice`
+  url: index.php?route=openapi/account/registerdevice
 - `register`
 - `login`
 - `logout`
