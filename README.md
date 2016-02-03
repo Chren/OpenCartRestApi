@@ -13,7 +13,6 @@ This is restful api for opencart. It also extends OpenCart to support some featu
 - RNCryptor
 
 ## Support Apis
-
 ### Account
 #### RegisterDevice
 - `url`: index.php?route=openapi/account/registerdevice
@@ -21,7 +20,7 @@ This is restful api for opencart. It also extends OpenCart to support some featu
 - `url`: index.php?route=openapi/account/register
 #### Login
 - `url`: index.php?route=openapi/account/login
-#### logout
+#### Logout
 - `url`: index.php?route=openapi/account/logout
 
 ### Products
