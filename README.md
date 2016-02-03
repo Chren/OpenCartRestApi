@@ -10,7 +10,7 @@ This is restful api for opencart. It also extends OpenCart to support some featu
 
 - Compatible with Opencart 2.0.3.1, may also compatible with other versions(not test yet).
 - mcrypt
-- RNCryptor
+- [RNCryptor](https://github.com/RNCryptor/RNCryptor)
 
 ## Usage
   Header for any api required login:
