@@ -123,4 +123,4 @@ This is restful api for opencart. It also extends OpenCart to support some featu
 OpenCartRestApi is released under the MIT license. See LICENSE for details.
 
 ## Contact
-Please create issue for any bug. You can also contact me via email: aren372@126.com
+Please create issue for any bugs. You can also contact me via email: aren372@126.com
