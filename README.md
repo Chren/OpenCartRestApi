@@ -119,6 +119,16 @@ This is restful api for opencart. It also extends OpenCart to support some featu
 - `getproducts`
 - `categories`
 
+### System
+#### Feedback
+url: index.php?route=openapi/feedback/addfeedback
+  Request:
+  
+| Param Name | Type  | Required  | Description  |
+|:--------------------:|:---------------------------:|:----------------------------:|:--------------------------------:|
+| content | string  | YES  | feedback content |
+| email | string  | YES  | user email |
+
 ## License
 OpenCartRestApi is released under the MIT license. See LICENSE for details.
 
