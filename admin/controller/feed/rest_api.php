@@ -89,11 +89,20 @@ class ControllerFeedRestApi extends Controller {
   			PRIMARY KEY (`deviceid`)
   		) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
 
+		$this->db->query("CREATE TABLE IF NOT EXISTS `" . DB_PREFIX . "feedback` (
+  			`question_id` varchar(32) NOT NULL,
+  			`customer_id` varchar(32) NOT NULL,
+  			`content` varchar(32) NOT NULL,
+  			`email` varchar(32) NOT NULL,
+  			PRIMARY KEY (`question_id`)
+  		) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
+
 		$this->db->query("ALTER TABLE `" . DB_PREFIX . "customer` ADD COLUMN api_token VARCHAR(32) DEFAULT NULL;");
 	}
 
 	public function uninstall() {
 		$this->db->query("DROP TABLE IF EXISTS `" . DB_PREFIX . "device`;");
+		$this->db->query("DROP TABLE IF EXISTS `" . DB_PREFIX . "feedback`;");
 		$this->db->query("ALTER TABLE `" . DB_PREFIX . "customer` DROP COLUMN api_token;");
 	}
 
